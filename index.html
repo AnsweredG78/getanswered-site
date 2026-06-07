@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="answered. gives independent contractors the back-office their PE-backed competitors already have. No long-term contracts. Live in 48 hours.">
+  <title>answered. — You build. We book.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root{--deep:#1C3A2E;--accent:#1D9E75;--mid:#2E5C46;--sage:#9FC4B7;--cream:#F7F3EC;--cream-dark:#EDE8DF;--ink:#1C2820;--muted:#6B8C7E;--rule:#DDD9D0;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'DM Mono','Courier New',monospace}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;transition:background .3s,padding .3s,border-bottom .3s;border-bottom:1px solid transparent}
+    nav.scrolled{background:rgba(247,243,236,.96);backdrop-filter:blur(12px);padding:14px 40px;border-bottom-color:var(--rule)}
+    .nav-logo{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--deep);letter-spacing:-.01em}
+    .nav-logo .p{color:var(--accent)}
+    .nav-right{display:flex;align-items:center;gap:24px}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-links a{font-size:13px;font-weight:400;color:var(--muted);transition:color .2s}
+    .nav-links a:hover{color:var(--deep)}
+    .nav-cta{font-size:13px;font-weight:500;background:var(--deep);color:var(--cream);padding:9px 20px;border-radius:6px;transition:background .2s,transform .2s}
+    .nav-cta:hover{background:var(--mid);transform:translateY(-1px)}
+    .lang-toggle{display:flex;align-items:center;gap:4px}
+    .lang-btn{background:none;border:none;font-size:12px;font-weight:500;color:var(--muted);cursor:pointer;padding:3px 6px;border-radius:4px;transition:color .2s;font-family:var(--sans)}
+    .lang-btn.active{color:var(--deep);background:var(--cream-dark)}
+    .lang-sep{font-size:11px;color:var(--rule)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .hamburger span{display:block;width:22px;height:1.5px;background:var(--deep);transition:all .3s}
+    .mobile-menu{display:none;position:fixed;inset:0;background:var(--deep);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;transition:opacity .3s}
+    .mobile-menu.open{opacity:1}
+    .mobile-menu a{font-family:var(--serif);font-size:36px;font-weight:500;color:var(--cream)}
+    .mobile-lang{display:flex;gap:12px;margin-top:8px}
+    .mobile-lang button{font-size:16px;font-weight:500;background:none;border:1px solid rgba(159,196,183,.3);color:var(--sage);padding:8px 20px;border-radius:6px;cursor:pointer;font-family:var(--sans)}
+    .mobile-lang button.active{background:var(--accent);color:white;border-color:var(--accent)}
+    .m-cta{font-family:var(--sans);font-size:15px;font-weight:500;background:var(--accent);color:white;padding:14px 32px;border-radius:8px;margin-top:4px}
+    #hero{min-height:100vh;display:flex;align-items:center;padding:120px 40px 80px;position:relative;overflow:hidden}
+    .hero-bg-word{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-family:var(--serif);font-size:clamp(200px,25vw,380px);font-weight:600;color:var(--cream-dark);letter-spacing:-.04em;line-height:1;user-select:none;pointer-events:none;white-space:nowrap}
+    .hero-bg-word .pp{color:#D4E8DF}
+    .hero-content{max-width:680px;position:relative;z-index:1}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+    .hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--accent)}
+    .hero-h1{font-family:var(--serif);font-size:clamp(44px,6vw,76px);font-weight:500;color:var(--deep);line-height:1.08;letter-spacing:-.02em;margin-bottom:24px}
+    .hero-sub{font-size:clamp(16px,2vw,19px);font-weight:300;color:var(--muted);line-height:1.65;max-width:520px;margin-bottom:36px}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;background:var(--deep);color:var(--cream);padding:14px 26px;border-radius:7px;transition:background .2s,transform .2s}
+    .btn-primary:hover{background:var(--mid);transform:translateY(-2px)}
+    .btn-primary .arrow{transition:transform .2s}
+    .btn-primary:hover .arrow{transform:translateX(4px)}
+    .btn-secondary{display:inline-flex;align-items:center;font-size:14px;font-weight:400;color:var(--deep);padding:14px 24px;border-radius:7px;border:1px solid var(--rule);transition:border-color .2s,background .2s}
+    .btn-secondary:hover{border-color:var(--deep);background:var(--cream-dark)}
+    .hero-trust{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--rule)}
+    #pain{background:var(--deep);padding:100px 40px;position:relative;overflow:hidden}
+    #pain::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(29,158,117,.08) 0%,transparent 60%);pointer-events:none}
+    .pain-inner{max-width:1100px;margin:0 auto}
+    .section-eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+    .pain-inner .section-eyebrow{color:var(--sage)}
+    .pain-h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;color:var(--cream);line-height:1.15;margin-bottom:12px;max-width:620px}
+    .pain-sub{font-size:16px;font-weight:300;color:var(--sage);margin-bottom:56px;max-width:500px}
+    .pain-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .pain-card{background:rgba(255,255,255,.04);border:1px solid rgba(159,196,183,.12);padding:36px 32px;position:relative;overflow:hidden;transition:background .3s}
+    .pain-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--accent);transition:height .4s ease}
+    .pain-card:hover::before{height:100%}
+    .pain-card:hover{background:rgba(255,255,255,.07)}
+    .pain-num{font-family:var(--serif);font-size:clamp(52px,6vw,80px);font-weight:500;color:var(--cream);line-height:1;margin-bottom:12px;letter-spacing:-.02em}
+    .pain-num .accent{color:var(--accent)}
+    .pain-label{font-size:14px;font-weight:300;color:var(--sage);line-height:1.6}
+    .pain-close{margin-top:56px;padding-top:40px;border-top:1px solid rgba(159,196,183,.15);font-size:16px;font-weight:300;color:var(--sage);max-width:600px;line-height:1.7}
+    .pain-close strong{color:var(--cream);font-weight:500}
+    #solution{padding:100px 40px}
+    .solution-inner{max-width:1100px;margin:0 auto}
+    .solution-top{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:64px}
+    .solution-h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;color:var(--deep);line-height:1.1}
+    .solution-sub{font-size:16px;font-weight:300;color:var(--muted);line-height:1.7}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule)}
+    .feature{padding:36px 32px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .25s;position:relative}
+    .feature:nth-child(3n){border-right:none}
+    .feature:nth-child(4),.feature:nth-child(5){border-bottom:none}
+    .feature:hover{background:#F2EDE4}
+    .feature-num{font-family:var(--mono);font-size:11px;color:var(--accent);margin-bottom:16px;display:block}
+    .feature-title{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--deep);margin-bottom:10px;line-height:1.2}
+    .feature-body{font-size:14px;color:var(--muted);line-height:1.65;font-weight:300}
+    .brand-cell{background:#F2EDE4;display:flex;align-items:center;justify-content:center;border-bottom:none}
+    .brand-cell-inner{text-align:center}
+    .brand-cell-name{font-family:var(--serif);font-size:52px;font-weight:500;color:var(--deep);letter-spacing:-.02em;line-height:1}
+    .brand-cell-name .p{color:var(--accent)}
+    .brand-cell-tag{font-size:12px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+    #how{background:var(--deep);padding:100px 40px}
+    .how-inner{max-width:1100px;margin:0 auto}
+    .how-inner .section-eyebrow{color:var(--sage)}
+    .how-h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;color:var(--cream);margin-bottom:64px;line-height:1.15}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+    .steps::before{content:'';position:absolute;top:40px;left:calc(33.333% + 40px);right:calc(33.333% + 40px);height:1px;background:linear-gradient(90deg,var(--accent),rgba(29,158,117,.2))}
+    .step{padding:0 32px 0 0}
+    .step:last-child{padding-right:0}
+    .step-n{font-family:var(--serif);font-size:80px;font-weight:500;color:rgba(247,243,236,.06);line-height:1;margin-bottom:-20px}
+    .step-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-bottom:20px;position:relative;z-index:1}
+    .step-title{font-family:var(--serif);font-size:24px;font-weight:500;color:var(--cream);margin-bottom:12px;line-height:1.2}
+    .step-body{font-size:14px;font-weight:300;color:var(--sage);line-height:1.7}
+    #pricing{padding:100px 40px}
+    .pricing-inner{max-width:1100px;margin:0 auto}
+    .pricing-top{text-align:center;margin-bottom:56px}
+    .pricing-h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;color:var(--deep);margin-bottom:12px;line-height:1.1}
+    .pricing-sub{font-size:16px;font-weight:300;color:var(--muted);max-width:480px;margin:0 auto}
+    .pricing-toggle-wrap{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:48px}
+    .toggle-label{font-size:14px;font-weight:400;color:var(--muted);transition:color .2s}
+    .toggle-label.active{color:var(--ink);font-weight:500}
+    .toggle-switch{position:relative;width:48px;height:26px;background:var(--cream-dark);border-radius:13px;cursor:pointer;border:1px solid var(--rule);transition:background .3s}
+    .toggle-switch.annual{background:var(--deep)}
+    .toggle-knob{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:white;box-shadow:0 1px 3px rgba(0,0,0,.15);transition:transform .3s}
+    .toggle-switch.annual .toggle-knob{transform:translateX(22px)}
+    .save-badge{font-size:11px;font-weight:500;padding:3px 9px;background:#EAF3DE;color:#3B6D11;border-radius:20px;letter-spacing:.04em}
+    .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .tier{background:white;border:1px solid var(--rule);border-radius:12px;padding:32px 28px;position:relative;transition:transform .25s,box-shadow .25s}
+    .tier:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(28,58,46,.08)}
+    .tier.featured{border:2px solid var(--deep);transform:translateY(-8px)}
+    .tier.featured:hover{transform:translateY(-12px)}
+    .tier-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--deep);color:var(--cream);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:20px;white-space:nowrap}
+    .tier-tag{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+    .tier-name{font-size:18px;font-weight:500;color:var(--ink);margin-bottom:16px}
+    .tier-price{font-family:var(--serif);font-size:54px;font-weight:500;color:var(--deep);line-height:1;margin-bottom:4px;letter-spacing:-.02em}
+    .tier-period{font-size:14px;color:var(--muted);font-weight:300;margin-bottom:6px}
+    .tier-setup{font-size:12px;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:4px}
+    .tier-setup .sf{font-weight:500;color:var(--ink)}
+    .tier-annual-note{font-size:12px;color:var(--accent);font-weight:500;margin-bottom:10px;display:none}
+    body.annual-mode .tier-setup{display:none}
+    body.annual-mode .tier-annual-note{display:block}
+    body.annual-mode .price-monthly{display:none}
+    body.annual-mode .price-annual{display:block}
+    body.annual-mode .annual-billed{display:block}
+    .price-monthly{display:block}
+    .price-annual{display:none}
+    .annual-billed{display:none;font-size:11px;color:var(--muted);font-style:italic;margin-bottom:4px}
+    .tier-desc{font-size:13px;color:var(--muted);line-height:1.65;font-weight:300;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-bottom:16px}
+    .tier-features{display:flex;flex-direction:column;gap:8px}
+    .tier-feature{font-size:13px;color:var(--muted);display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+    .tier-feature::before{content:'—';color:var(--accent);flex-shrink:0}
+    .pricing-note{text-align:center;font-size:13px;color:var(--muted);margin-top:32px}
+    #results{background:var(--deep);padding:100px 40px}
+    .results-inner{max-width:1100px;margin:0 auto}
+    .results-inner .section-eyebrow{color:var(--sage)}
+    .results-h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;color:var(--cream);margin-bottom:56px;line-height:1.15;max-width:560px}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:56px}
+    .metric{background:rgba(255,255,255,.04);border:1px solid rgba(159,196,183,.12);padding:32px 24px;text-align:center}
+    .metric-num{font-family:var(--serif);font-size:clamp(40px,4vw,56px);font-weight:500;color:var(--accent);line-height:1;margin-bottom:10px;letter-spacing:-.02em}
+    .metric-label{font-size:12px;color:var(--sage);line-height:1.5;font-weight:300}
+    .testimonials{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .testimonial{background:rgba(255,255,255,.05);border:1px solid rgba(159,196,183,.12);border-radius:12px;padding:28px}
+    .testimonial-quote{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--cream);line-height:1.65;margin-bottom:20px;font-weight:400}
+    .testimonial-quote::before{content:'\201C';color:var(--accent)}
+    .testimonial-quote::after{content:'\201D';color:var(--accent)}
+    .testimonial-attr{font-size:12px;color:var(--sage)}
+    .testimonial-attr strong{color:var(--cream);font-weight:500;display:block;margin-bottom:2px}
+    #faq{padding:100px 40px}
+    .faq-inner{max-width:760px;margin:0 auto}
+    .faq-h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;color:var(--deep);margin-bottom:48px;line-height:1.1}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid var(--rule)}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:22px 0;font-family:var(--sans);font-size:16px;font-weight:500;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .2s}
+    .faq-q:hover{color:var(--deep)}
+    .faq-icon{width:22px;height:22px;border-radius:50%;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:var(--muted);transition:all .3s;line-height:1}
+    .faq-item.open .faq-icon{background:var(--deep);border-color:var(--deep);color:var(--cream);transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+    .faq-a-inner{font-size:15px;color:var(--muted);line-height:1.75;font-weight:300;padding-bottom:22px}
+    .faq-item.open .faq-a{max-height:300px}
+    #cta{background:var(--deep);padding:100px 40px;text-align:center;position:relative;overflow:hidden}
+    #cta::before{content:'answered.';position:absolute;font-family:var(--serif);font-size:clamp(100px,18vw,240px);font-weight:600;color:rgba(255,255,255,.03);left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;letter-spacing:-.04em}
+    .cta-inner{max-width:700px;margin:0 auto;position:relative;z-index:1}
+    .cta-h2{font-family:var(--serif);font-size:clamp(36px,5vw,60px);font-weight:500;color:var(--cream);line-height:1.1;margin-bottom:20px;letter-spacing:-.02em}
+    .cta-sub{font-size:17px;font-weight:300;color:var(--sage);margin-bottom:40px;line-height:1.6}
+    .cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-accent{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;background:var(--accent);color:white;padding:16px 32px;border-radius:8px;transition:background .2s,transform .2s}
+    .btn-accent:hover{background:#18875F;transform:translateY(-2px)}
+    .btn-ghost{display:inline-flex;align-items:center;font-size:15px;font-weight:400;color:var(--sage);padding:16px 28px;border-radius:8px;border:1px solid rgba(159,196,183,.25);transition:border-color .2s,color .2s}
+    .btn-ghost:hover{border-color:var(--sage);color:var(--cream)}
+    .cta-trust{font-size:12px;color:rgba(159,196,183,.6);margin-top:20px}
+    footer{background:#131F18;padding:48px 40px}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+    .footer-brand{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--cream)}
+    .footer-brand .p{color:var(--accent)}
+    .footer-links{display:flex;gap:24px;flex-wrap:wrap}
+    .footer-links a{font-size:13px;color:rgba(159,196,183,.6);transition:color .2s}
+    .footer-links a:hover{color:var(--sage)}
+    .footer-legal{width:100%;font-size:12px;color:rgba(159,196,183,.35);margin-top:16px;padding-top:20px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .reveal-delay-1{transition-delay:.1s}
+    .reveal-delay-2{transition-delay:.2s}
+    .reveal-delay-3{transition-delay:.3s}
+    .reveal-delay-4{transition-delay:.4s}
+    @media(max-width:900px){
+      nav{padding:16px 24px}
+      nav.scrolled{padding:12px 24px}
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .mobile-menu{display:flex}
+      #hero{padding:100px 24px 60px}
+      .hero-bg-word{display:none}
+      #pain,#solution,#how,#pricing,#results,#faq,#cta{padding:72px 24px}
+      .pain-stats,.steps{grid-template-columns:1fr;gap:2px}
+      .steps::before{display:none}
+      .step{padding:0 0 32px}
+      .solution-top{grid-template-columns:1fr;gap:24px}
+      .features{grid-template-columns:1fr}
+      .feature:nth-child(n){border-right:none;border-bottom:1px solid var(--rule)}
+      .feature:last-child{border-bottom:none}
+      .tiers{grid-template-columns:1fr}
+      .tier.featured{transform:none}
+      .tier.featured:hover{transform:translateY(-4px)}
+      .metrics{grid-template-columns:repeat(2,1fr)}
+      .testimonials{grid-template-columns:1fr}
+      .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+    }
+    @media(max-width:600px){
+      .hero-h1{font-size:38px}
+      .hero-ctas{flex-direction:column}
+      .btn-primary,.btn-secondary{width:100%;justify-content:center}
+      .cta-buttons{flex-direction:column;align-items:center}
+      .btn-accent,.btn-ghost{width:100%;justify-content:center}
+    }
+
+    #contact{padding:100px 40px;background:var(--cream-dark)}
+    .contact-inner{max-width:680px;margin:0 auto}
+    .contact-top{margin-bottom:48px}
+    .contact-h2{font-family:var(--serif);font-size:clamp(32px,4vw,48px);font-weight:500;color:var(--deep);margin-bottom:12px;line-height:1.1}
+    .contact-sub{font-size:16px;font-weight:300;color:var(--muted);line-height:1.7}
+    .contact-form{display:flex;flex-direction:column;gap:16px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .form-group{display:flex;flex-direction:column;gap:6px}
+    .form-group label{font-size:13px;font-weight:500;color:var(--ink)}
+    .form-group input,.form-group select{font-family:var(--sans);font-size:14px;color:var(--ink);background:white;border:1px solid var(--rule);border-radius:7px;padding:12px 14px;transition:border-color .2s;-webkit-appearance:none;appearance:none}
+    .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--accent)}
+    .form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B8C7E' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+    .form-submit{font-family:var(--sans);font-size:15px;font-weight:500;background:var(--deep);color:var(--cream);border:none;padding:16px 32px;border-radius:8px;cursor:pointer;transition:background .2s,transform .2s;align-self:flex-start;margin-top:8px}
+    .form-submit:hover{background:var(--mid);transform:translateY(-2px)}
+    .form-note{font-size:12px;color:var(--muted);margin-top:4px}
+    .form-consent{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6}
+    .form-consent a{color:var(--accent);text-decoration:underline}
+    .form-success{display:none;font-size:14px;color:var(--accent);font-weight:500;padding:14px 18px;background:#EAF3DE;border-radius:8px;border:1px solid #C0DD97;margin-top:8px}
+    .form-error{display:none;font-size:14px;color:#A32D2D;font-weight:500;padding:14px 18px;background:#FCEBEB;border-radius:8px;margin-top:8px}
+    @media(max-width:600px){.form-row{grid-template-columns:1fr}}
+
+    .modal-overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(28,58,46,.7);backdrop-filter:blur(4px);overflow-y:auto;padding:40px 20px}
+    .modal-overlay.open{display:flex;align-items:flex-start;justify-content:center}
+    .modal-box{background:var(--cream);border-radius:14px;max-width:760px;width:100%;padding:48px;position:relative;margin:auto}
+    .modal-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:24px;color:var(--muted);cursor:pointer;line-height:1;transition:color .2s}
+    .modal-close:hover{color:var(--deep)}
+    .modal-eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+    .modal-title{font-family:var(--serif);font-size:36px;font-weight:500;color:var(--deep);margin-bottom:4px}
+    .modal-date{font-size:12px;color:var(--muted);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--rule)}
+    .modal-section{margin-bottom:28px}
+    .modal-section h2{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--deep);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+    .modal-section h3{font-size:13px;font-weight:500;color:var(--ink);margin:14px 0 6px}
+    .modal-section p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:10px}
+    .modal-section ul{margin:6px 0 10px 18px}
+    .modal-section ul li{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:4px}
+    .modal-section a{color:var(--accent);text-decoration:underline}
+    .modal-highlight{background:var(--cream-dark);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin-bottom:16px}
+    .modal-highlight p{margin-bottom:0;color:var(--ink);font-size:13px}
+    @media(max-width:600px){.modal-box{padding:28px 20px}}
+  </style>
+</head>
+<body>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#how" onclick="closeMobile()" data-i18n="nav-how">How it works</a>
+  <a href="#pricing" onclick="closeMobile()" data-i18n="nav-pricing">Pricing</a>
+  <a href="#faq" onclick="closeMobile()" data-i18n="nav-faq">FAQ</a>
+  <a href="#cta" onclick="closeMobile()" class="m-cta" data-i18n="nav-cta">Get started</a>
+  <div class="mobile-lang">
+    <button class="active" data-lang="en" onclick="setLang('en');closeMobile()">EN</button>
+    <button data-lang="es" onclick="setLang('es');closeMobile()">ES</button>
+  </div>
+</div>
+<nav id="nav">
+  <a href="#" class="nav-logo">answered<span class="p">.</span></a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#how" data-i18n="nav-how">How it works</a>
+      <a href="#pricing" data-i18n="nav-pricing">Pricing</a>
+      <a href="#faq" data-i18n="nav-faq">FAQ</a>
+      <a href="#contact" data-i18n="nav-contact">Contact</a>
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="#cta" class="nav-cta" data-i18n="nav-cta">Get started &rarr;</a>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<section id="hero">
+  <div class="hero-bg-word">answered<span class="pp">.</span></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal" data-i18n="hero-eyebrow">Contractor operations &middot; Done for you</div>
+    <h1 class="hero-h1 reveal reveal-delay-1" data-i18n="hero-h1">While you&rsquo;re on<br>the job, we&rsquo;re<br>on the phone.</h1>
+    <p class="hero-sub reveal reveal-delay-2" data-i18n="hero-sub">answered. gives independent contractors the back-office their PE-backed competitors already have&thinsp;&mdash;&thinsp;live call answering, automated follow-up, and job booking. No new hires. No missed revenue.</p>
+    <div class="hero-ctas reveal reveal-delay-3">
+      <a href="#cta" class="btn-primary"><span data-i18n="hero-cta1">Get your calls answered</span> <span class="arrow">&rarr;</span></a>
+      <a href="#how" class="btn-secondary" data-i18n="hero-cta2">See how it works</a>
+    </div>
+    <div class="hero-trust reveal reveal-delay-4">
+      <span data-i18n="trust-1">No long-term contracts</span>
+      <span class="trust-dot"></span>
+      <span data-i18n="trust-2">30-day cancellation notice</span>
+      <span class="trust-dot"></span>
+      <span data-i18n="trust-3">Live in 48 hours</span>
+    </div>
+  </div>
+</section>
+<section id="pain">
+  <div class="pain-inner">
+    <div class="section-eyebrow reveal" data-i18n="pain-eyebrow">The problem</div>
+    <h2 class="pain-h2 reveal" data-i18n="pain-h2">You&rsquo;re not losing jobs because of your work.</h2>
+    <p class="pain-sub reveal" data-i18n="pain-sub">You&rsquo;re losing them because of your phone. Here&rsquo;s what&rsquo;s happening while you&rsquo;re on the job.</p>
+    <div class="pain-stats">
+      <div class="pain-card reveal">
+        <div class="pain-num"><span>40</span><span class="accent">%</span></div>
+        <p class="pain-label" data-i18n="pain-label-1">of inbound calls go unanswered during field hours. Each one is a job someone else is booking right now.</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-1">
+        <div class="pain-num"><span>26</span><span style="font-size:.5em;vertical-align:middle;color:var(--sage);margin-left:4px">hrs</span></div>
+        <p class="pain-label" data-i18n="pain-label-2">average time before a contractor returns a missed call. The customer hired someone else 24 hours ago.</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-2">
+        <div class="pain-num"><span class="accent">$</span><span>800</span><span class="accent">+</span></div>
+        <p class="pain-label" data-i18n="pain-label-3">average ticket value in HVAC, plumbing, and roofing. That&rsquo;s what every missed call is costing you.</p>
+      </div>
+    </div>
+    <p class="pain-close reveal" data-i18n="pain-close">Your PE-backed competitors have a full office handling calls, following up leads, and booking jobs. <strong>You&rsquo;ve been doing it alone. That changes with answered.</strong></p>
+  </div>
+</section>
+<section id="solution">
+  <div class="solution-inner">
+    <div class="solution-top">
+      <div>
+        <div class="section-eyebrow reveal" style="color:var(--muted)" data-i18n="sol-eyebrow">What we do</div>
+        <h2 class="solution-h2 reveal" data-i18n="sol-h2">Your back office.<br>Running while<br>you work.</h2>
+      </div>
+      <p class="solution-sub reveal" data-i18n="sol-sub">answered. handles the business side so you can focus on the job. Every call, every lead, every follow-up&thinsp;&mdash;&thinsp;handled.</p>
+    </div>
+    <div class="features">
+      <div class="feature reveal">
+        <span class="feature-num">01 &mdash;</span>
+        <h3 class="feature-title" data-i18n="feat-title-1">Every call answered or captured</h3>
+        <p class="feature-body" data-i18n="feat-body-1">Miss a call? Your customer gets a text back within 60 seconds. Live answering available during business hours. Nothing falls through the cracks.</p>
+      </div>
+      <div class="feature reveal reveal-delay-1">
+        <span class="feature-num">02 &mdash;</span>
+        <h3 class="feature-title" data-i18n="feat-title-2">Leads followed up until they book</h3>
+        <p class="feature-body" data-i18n="feat-body-2">We run a multi-touch follow-up sequence on every lead&thinsp;&mdash;&thinsp;texts, calls, emails&thinsp;&mdash;&thinsp;until they schedule an estimate or say no. No more leads going cold.</p>
+      </div>
+      <div class="feature reveal reveal-delay-2">
+        <span class="feature-num">03 &mdash;</span>
+        <h3 class="feature-title" data-i18n="feat-title-3">Open estimates chased down</h3>
+        <p class="feature-body" data-i18n="feat-body-3">We follow up on every outstanding quote at 2, 5, and 10 days. Most contractors leave 30&ndash;40% of revenue sitting in un-followed estimates.</p>
+      </div>
+      <div class="feature reveal" style="border-bottom:none">
+        <span class="feature-num">04 &mdash;</span>
+        <h3 class="feature-title" data-i18n="feat-title-4">Reviews generated automatically</h3>
+        <p class="feature-body" data-i18n="feat-body-4">Every completed job triggers a review request. Most clients go from 30 to 150+ Google reviews in their first six months.</p>
+      </div>
+      <div class="feature reveal reveal-delay-1" style="border-bottom:none">
+        <span class="feature-num">05 &mdash;</span>
+        <h3 class="feature-title" data-i18n="feat-title-5">Weekly reporting you&rsquo;ll actually read</h3>
+        <p class="feature-body" data-i18n="feat-body-5">Every Monday: calls answered, leads captured, estimates sent, jobs booked. You stay in control without touching a thing.</p>
+      </div>
+      <div class="feature brand-cell reveal reveal-delay-2" style="border-bottom:none;border-right:none;padding:36px 32px">
+        <div class="brand-cell-inner">
+          <div class="brand-cell-name">answered<span class="p">.</span></div>
+          <div class="brand-cell-tag" data-i18n="brand-tag">You build. We book.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="how">
+  <div class="how-inner">
+    <div class="section-eyebrow reveal" data-i18n="how-eyebrow">How it works</div>
+    <h2 class="how-h2 reveal" data-i18n="how-h2">Live in 48 hours.</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-n">01</div>
+        <div class="step-dot"></div>
+        <h3 class="step-title" data-i18n="step-title-1">We plug in</h3>
+        <p class="step-body" data-i18n="step-body-1">You forward your business line to answered. We set up your CRM, automations, and booking calendar. You don&rsquo;t configure a thing&thinsp;&mdash;&thinsp;we handle the entire setup in 48 hours.</p>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-n">02</div>
+        <div class="step-dot"></div>
+        <h3 class="step-title" data-i18n="step-title-2">Every call gets handled</h3>
+        <p class="step-body" data-i18n="step-body-2">Inbound calls are answered or captured with a 60-second text-back. Leads are logged, followed up, and moved through your pipeline. Estimates are tracked and chased automatically.</p>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-n">03</div>
+        <div class="step-dot"></div>
+        <h3 class="step-title" data-i18n="step-title-3">You see everything</h3>
+        <p class="step-body" data-i18n="step-body-3">Your weekly report shows every call, lead, and booked job. Log into your dashboard anytime. You&rsquo;re always in control&thinsp;&mdash;&thinsp;just not buried in it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="pricing">
+  <div class="pricing-inner">
+    <div class="pricing-top">
+      <div class="section-eyebrow reveal" style="color:var(--muted)" data-i18n="price-eyebrow">Pricing</div>
+      <h2 class="pricing-h2 reveal" data-i18n="price-h2">Straightforward pricing.<br>No surprises.</h2>
+      <p class="pricing-sub reveal" data-i18n="price-sub">One missed HVAC job pays for a full year of answered.</p>
+    </div>
+    <div class="pricing-toggle-wrap reveal">
+      <span class="toggle-label active" id="label-monthly" data-i18n="toggle-monthly">Monthly</span>
+      <div class="toggle-switch" id="pricingToggle" onclick="togglePricing()"><div class="toggle-knob"></div></div>
+      <span class="toggle-label" id="label-annual" data-i18n="toggle-annual">Annual</span>
+      <span class="save-badge" data-i18n="save-badge">Save 25%</span>
+    </div>
+    <div class="tiers">
+      <div class="tier reveal">
+        <div class="tier-tag">Signals</div>
+        <div class="tier-name" data-i18n="tier1-name">Automation</div>
+        <div class="price-monthly"><div class="tier-price">$397</div></div>
+        <div class="price-annual"><div class="tier-price">$297</div></div>
+        <div class="tier-period" data-i18n="per-month">per month</div>
+        <div class="annual-billed" data-i18n="annual-billed-1">$3,564 billed annually</div>
+        <div class="tier-setup" data-i18n="tier1-setup">One-time setup: <span class="sf">$297</span></div>
+        <div class="tier-annual-note" data-i18n="setup-waived">&#10003; Setup fee waived on annual plans</div>
+        <p class="tier-desc" data-i18n="tier1-desc">Automation only. Captures every missed call, fires text-backs, populates your CRM, and sends weekly reports. Your system running 24/7 without a human in the loop.</p>
+        <div class="tier-features">
+          <div class="tier-feature" data-i18n="t1f1">Missed call text-back (60 sec)</div>
+          <div class="tier-feature" data-i18n="t1f2">Voicemail transcription</div>
+          <div class="tier-feature" data-i18n="t1f3">3-touch follow-up sequence</div>
+          <div class="tier-feature" data-i18n="t1f4">CRM pipeline setup</div>
+          <div class="tier-feature" data-i18n="t1f5">Review request automation</div>
+          <div class="tier-feature" data-i18n="t1f6">Weekly lead report</div>
+        </div>
+      </div>
+      <div class="tier featured reveal reveal-delay-1">
+        <div class="tier-badge" data-i18n="most-popular">Most popular</div>
+        <div class="tier-tag">Command</div>
+        <div class="tier-name" data-i18n="tier2-name">Automation + Human</div>
+        <div class="price-monthly"><div class="tier-price">$897</div></div>
+        <div class="price-annual"><div class="tier-price">$697</div></div>
+        <div class="tier-period" data-i18n="per-month">per month</div>
+        <div class="annual-billed" data-i18n="annual-billed-2">$8,364 billed annually</div>
+        <div class="tier-setup" data-i18n="tier2-setup">One-time setup: <span class="sf">$497</span></div>
+        <div class="tier-annual-note" data-i18n="setup-waived">&#10003; Setup fee waived on annual plans</div>
+        <p class="tier-desc" data-i18n="tier2-desc">Automation plus a trained VA handling live calls, booking estimates, and following up on open quotes. Everything your competitors&rsquo; office does&thinsp;&mdash;&thinsp;for a fraction of the cost.</p>
+        <div class="tier-features">
+          <div class="tier-feature" data-i18n="t2f1">Everything in Signals</div>
+          <div class="tier-feature" data-i18n="t2f2">Live call answering (M&ndash;F 8&ndash;6)</div>
+          <div class="tier-feature" data-i18n="t2f3">Estimate booking &amp; scheduling</div>
+          <div class="tier-feature" data-i18n="t2f4">Open estimate follow-up</div>
+          <div class="tier-feature" data-i18n="t2f5">Monthly strategy call</div>
+          <div class="tier-feature" data-i18n="t2f6">Priority response SLA</div>
+        </div>
+      </div>
+      <div class="tier reveal reveal-delay-2">
+        <div class="tier-tag">Full Ops</div>
+        <div class="tier-name" data-i18n="tier3-name">Complete Partner</div>
+        <div class="price-monthly"><div class="tier-price">$1,497</div></div>
+        <div class="price-annual"><div class="tier-price">$1,197</div></div>
+        <div class="tier-period" data-i18n="per-month">per month</div>
+        <div class="annual-billed" data-i18n="annual-billed-3">$14,364 billed annually</div>
+        <div class="tier-setup" data-i18n="tier3-setup">One-time setup: <span class="sf">$797</span></div>
+        <div class="tier-annual-note" data-i18n="setup-waived">&#10003; Setup fee waived on annual plans</div>
+        <p class="tier-desc" data-i18n="tier3-desc">White-glove operations partner. We run your entire back office&thinsp;&mdash;&thinsp;inbound, outbound, scheduling, invoice follow-up, and monthly reporting.</p>
+        <div class="tier-features">
+          <div class="tier-feature" data-i18n="t3f1">Everything in Command</div>
+          <div class="tier-feature" data-i18n="t3f2">Extended hours coverage</div>
+          <div class="tier-feature" data-i18n="t3f3">Invoice &amp; payment follow-up</div>
+          <div class="tier-feature" data-i18n="t3f4">Reactivation campaigns</div>
+          <div class="tier-feature" data-i18n="t3f5">Dedicated ops manager</div>
+          <div class="tier-feature" data-i18n="t3f6">Custom SOP documentation</div>
+        </div>
+      </div>
+    </div>
+    <p class="pricing-note reveal" data-i18n="pricing-note">30-day cancellation notice on all plans &middot; One-time setup fee applies &middot; Annual plans waive setup fee</p>
+  </div>
+</section>
+<section id="results">
+  <div class="results-inner">
+    <div class="section-eyebrow reveal" data-i18n="results-eyebrow">Results</div>
+    <h2 class="results-h2 reveal" data-i18n="results-h2">What answered. clients see<br>in the first 30 days.</h2>
+    <div class="metrics">
+      <div class="metric reveal"><div class="metric-num">12+</div><p class="metric-label" data-i18n="metric-1">additional leads captured per month that would have gone unanswered</p></div>
+      <div class="metric reveal reveal-delay-1"><div class="metric-num">94%</div><p class="metric-label" data-i18n="metric-2">of leads followed up within 5 minutes vs. 26 hours manually</p></div>
+      <div class="metric reveal reveal-delay-2"><div class="metric-num">8&times;</div><p class="metric-label" data-i18n="metric-3">more Google reviews in the first 90 days vs. asking manually</p></div>
+      <div class="metric reveal reveal-delay-3"><div class="metric-num">$9.6k</div><p class="metric-label" data-i18n="metric-4">average recovered pipeline value in month one</p></div>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial reveal">
+        <p class="testimonial-quote" data-i18n="test-1">I had 14 calls I didn&rsquo;t know I missed last month. answered. followed up on every one. Three of them booked jobs. That&rsquo;s over $6,000 I would have left on the table.</p>
+        <div class="testimonial-attr"><strong>Mike K.</strong><span data-i18n="test-1-attr">Owner, Kowalski HVAC &middot; Chicago, IL</span></div>
+      </div>
+      <div class="testimonial reveal reveal-delay-1">
+        <p class="testimonial-quote" data-i18n="test-2">My PE-backed competitor down the street answers every call within two rings. I used to lose jobs to them constantly. Not anymore. answered. leveled the playing field.</p>
+        <div class="testimonial-attr"><strong>Dave R.</strong><span data-i18n="test-2-attr">Owner, Rivera Plumbing &middot; Milwaukee, WI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="faq">
+  <div class="faq-inner">
+    <div class="section-eyebrow reveal" style="color:var(--muted)" data-i18n="faq-eyebrow">FAQ</div>
+    <h2 class="faq-h2 reveal" data-i18n="faq-h2">Straight answers.</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq-q1">Does my customer know they&rsquo;re not talking directly to me?</span><span class="faq-icon">+</span></button><div class="faq-a"><p class="faq-a-inner" data-i18n="faq-a1">No. We answer as your business &mdash; your name, your number. Your customers don&rsquo;t know answered. exists. They just think you finally have your act together.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq-q2">What trades do you work with?</span><span class="faq-icon">+</span></button><div class="faq-a"><p class="faq-a-inner" data-i18n="faq-a2">HVAC, plumbing, electrical, roofing, landscaping, general contracting, and most home service trades. If your phone rings with inbound leads, we can help.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq-q3">How long does it take to get set up?</span><span class="faq-icon">+</span></button><div class="faq-a"><p class="faq-a-inner" data-i18n="faq-a3">Most clients are fully live within 48 hours of signing up. We handle the entire setup &mdash; you don&rsquo;t configure anything. We just need your business details and you forward your line to us.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq-q4">Do I have to sign a long-term contract?</span><span class="faq-icon">+</span></button><div class="faq-a"><p class="faq-a-inner" data-i18n="faq-a4">No long-term commitment required. All plans run month-to-month with a 30-day cancellation notice. Annual plans waive the setup fee and save you 25% monthly.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq-q5">What if I already have a CRM or scheduling software?</span><span class="faq-icon">+</span></button><div class="faq-a"><p class="faq-a-inner" data-i18n="faq-a5">We can work alongside most existing tools. If you don&rsquo;t have one, we set up your entire system as part of onboarding &mdash; included in every plan at no extra charge.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq-q6">How is this different from a regular answering service?</span><span class="faq-icon">+</span></button><div class="faq-a"><p class="faq-a-inner" data-i18n="faq-a6">An answering service takes messages. We manage your entire lead lifecycle &mdash; from the first missed call to a booked job to a five-star Google review. We&rsquo;re your operations partner, not a message pad.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq-q7">Can I see what&rsquo;s happening with my leads in real time?</span><span class="faq-icon">+</span></button><div class="faq-a"><p class="faq-a-inner" data-i18n="faq-a7">Yes. You get access to your own dashboard &mdash; log in anytime to see every call, lead, estimate, and booked job. Plus a weekly report every Monday morning.</p></div></div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-top">
+      <div class="section-eyebrow reveal" style="color:var(--muted)" data-i18n="contact-eyebrow">Get started</div>
+      <h2 class="contact-h2 reveal" data-i18n="contact-h2">Let&rsquo;s talk about your business.</h2>
+      <p class="contact-sub reveal" data-i18n="contact-sub">Fill out the form and we&rsquo;ll reach out within one business hour. No sales pitch &mdash; just a straight conversation about whether answered. is the right fit.</p>
+    </div>
+    <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mnjypjgq" method="POST">
+      <input type="hidden" name="_subject" value="New answered. inquiry">
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="form-fname">First name</label>
+          <input type="text" name="first_name" required placeholder="Mike">
+        </div>
+        <div class="form-group">
+          <label data-i18n="form-business">Business name</label>
+          <input type="text" name="business_name" required placeholder="Kowalski HVAC">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="form-trade">Trade</label>
+          <select name="trade" required>
+            <option value="" data-i18n="form-select">Select your trade...</option>
+            <option>HVAC</option>
+            <option>Plumbing</option>
+            <option>Electrical</option>
+            <option>Roofing</option>
+            <option>Landscaping</option>
+            <option>General Contracting</option>
+            <option data-i18n="form-other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="form-missed">Missed calls per week</label>
+          <select name="missed_calls" required>
+            <option value="" data-i18n="form-select">Select...</option>
+            <option>1&ndash;5</option>
+            <option>5&ndash;10</option>
+            <option>10+</option>
+            <option data-i18n="form-notsure">Not sure</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="form-phone">Phone number</label>
+          <input type="tel" name="phone" required placeholder="(312) 555-0198">
+        </div>
+        <div class="form-group">
+          <label data-i18n="form-email">Email</label>
+          <input type="email" name="email" required placeholder="you@yourbusiness.com">
+        </div>
+      </div>
+      <button type="submit" class="form-submit" data-i18n="form-submit">Get started &rarr;</button>
+      <p class="form-note" data-i18n="form-note">We respond within one business hour. No spam, ever.</p>
+      <p class="form-consent" data-i18n="form-consent">By submitting this form you agree to be contacted by answered. via phone, email, or text message regarding your inquiry. Reply STOP to opt out of texts at any time. View our <a href="#" onclick="openModal('privacy-modal');return false;" data-i18n="form-privacy-link">Privacy Policy</a>.</p>
+      <div class="form-success" id="formSuccess" data-i18n="form-success">Thanks &mdash; we&rsquo;ll be in touch within the hour. Check your phone.</div>
+      <div class="form-error" id="formError" data-i18n="form-error">Something went wrong. Email us directly at hello@getanswered.co</div>
+    </form>
+  </div>
+</section>
+<section id="cta">
+  <div class="cta-inner">
+    <h2 class="cta-h2 reveal" data-i18n="cta-h2">Your competitors aren&rsquo;t hoping leads call back.<br>They have a system.</h2>
+    <p class="cta-sub reveal" data-i18n="cta-sub">Get the same back-office operations they have &mdash; without the overhead.</p>
+    <div class="cta-buttons reveal">
+      <a href="#contact" class="btn-accent" data-i18n="cta-btn1">Get started today &rarr;</a>
+      <a href="#contact" class="btn-ghost" data-i18n="cta-btn2">Talk to us first</a>
+    </div>
+    <p class="cta-trust reveal" data-i18n="cta-trust">No long-term contracts &middot; 30-day cancellation notice &middot; Live in 48 hours</p>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">answered<span class="p">.</span></div>
+    <div class="footer-links">
+      <a href="#how" data-i18n="nav-how">How it works</a>
+      <a href="#pricing" data-i18n="nav-pricing">Pricing</a>
+      <a href="#faq" data-i18n="nav-faq">FAQ</a>
+      <a href="#contact" data-i18n="nav-contact">Contact</a>
+      <a href="#" onclick="openModal('privacy-modal');return false;" data-i18n="footer-privacy">Privacy</a>
+      <a href="#" onclick="openModal('terms-modal');return false;" data-i18n="footer-terms">Terms</a>
+    </div>
+    <div class="footer-legal">
+      <span data-i18n="footer-legal">&copy; 2025 Answered. A Corbel Group Company. All rights reserved.</span>
+      <span>hello@getanswered.co &middot; getanswered.co</span>
+    </div>
+  </div>
+</footer>
+<script>
+  const i18n = {
+    en: {
+      'nav-how': 'How it works', 'nav-pricing': 'Pricing', 'nav-faq': 'FAQ', 'nav-contact': 'Contact', 'nav-cta': 'Get started &rarr;',
+      'hero-eyebrow': 'Contractor operations &middot; Done for you',
+      'hero-h1': 'While you&rsquo;re on<br>the job, we&rsquo;re<br>on the phone.',
+      'hero-sub': 'answered. gives independent contractors the back-office their PE-backed competitors already have&thinsp;&mdash;&thinsp;live call answering, automated follow-up, and job booking. No new hires. No missed revenue.',
+      'hero-cta1': 'Get your calls answered', 'hero-cta2': 'See how it works',
+      'trust-1': 'No long-term contracts', 'trust-2': '30-day cancellation notice', 'trust-3': 'Live in 48 hours',
+      'pain-eyebrow': 'The problem',
+      'pain-h2': 'You&rsquo;re not losing jobs because of your work.',
+      'pain-sub': 'You&rsquo;re losing them because of your phone. Here&rsquo;s what&rsquo;s happening while you&rsquo;re on the job.',
+      'pain-label-1': 'of inbound calls go unanswered during field hours. Each one is a job someone else is booking right now.',
+      'pain-label-2': 'average time before a contractor returns a missed call. The customer hired someone else 24 hours ago.',
+      'pain-label-3': 'average ticket value in HVAC, plumbing, and roofing. That&rsquo;s what every missed call is costing you.',
+      'pain-close': 'Your PE-backed competitors have a full office handling calls, following up leads, and booking jobs. <strong>You&rsquo;ve been doing it alone. That changes with answered.</strong>',
+      'sol-eyebrow': 'What we do', 'sol-h2': 'Your back office.<br>Running while<br>you work.',
+      'sol-sub': 'answered. handles the business side so you can focus on the job. Every call, every lead, every follow-up&thinsp;&mdash;&thinsp;handled.',
+      'feat-title-1': 'Every call answered or captured', 'feat-body-1': 'Miss a call? Your customer gets a text back within 60 seconds. Live answering available during business hours. Nothing falls through the cracks.',
+      'feat-title-2': 'Leads followed up until they book', 'feat-body-2': 'We run a multi-touch follow-up sequence on every lead&thinsp;&mdash;&thinsp;texts, calls, emails&thinsp;&mdash;&thinsp;until they schedule an estimate or say no. No more leads going cold.',
+      'feat-title-3': 'Open estimates chased down', 'feat-body-3': 'We follow up on every outstanding quote at 2, 5, and 10 days. Most contractors leave 30&ndash;40% of revenue sitting in un-followed estimates.',
+      'feat-title-4': 'Reviews generated automatically', 'feat-body-4': 'Every completed job triggers a review request. Most clients go from 30 to 150+ Google reviews in their first six months.',
+      'feat-title-5': 'Weekly reporting you&rsquo;ll actually read', 'feat-body-5': 'Every Monday: calls answered, leads captured, estimates sent, jobs booked. You stay in control without touching a thing.',
+      'brand-tag': 'You build. We book.',
+      'how-eyebrow': 'How it works', 'how-h2': 'Live in 48 hours.',
+      'step-title-1': 'We plug in', 'step-body-1': 'You forward your business line to answered. We set up your CRM, automations, and booking calendar. You don&rsquo;t configure a thing&thinsp;&mdash;&thinsp;we handle the entire setup in 48 hours.',
+      'step-title-2': 'Every call gets handled', 'step-body-2': 'Inbound calls are answered or captured with a 60-second text-back. Leads are logged, followed up, and moved through your pipeline. Estimates are tracked and chased automatically.',
+      'step-title-3': 'You see everything', 'step-body-3': 'Your weekly report shows every call, lead, and booked job. Log into your dashboard anytime. You&rsquo;re always in control&thinsp;&mdash;&thinsp;just not buried in it.',
+      'price-eyebrow': 'Pricing', 'price-h2': 'Straightforward pricing.<br>No surprises.', 'price-sub': 'One missed HVAC job pays for a full year of answered.',
+      'toggle-monthly': 'Monthly', 'toggle-annual': 'Annual', 'save-badge': 'Save 25%',
+      'per-month': 'per month',
+      'annual-billed-1': '$3,564 billed annually', 'annual-billed-2': '$8,364 billed annually', 'annual-billed-3': '$14,364 billed annually',
+      'tier1-name': 'Automation', 'tier1-setup': 'One-time setup: <span class="sf">$297</span>', 'tier1-desc': 'Automation only. Captures every missed call, fires text-backs, populates your CRM, and sends weekly reports. Your system running 24/7 without a human in the loop.',
+      'tier2-name': 'Automation + Human', 'tier2-setup': 'One-time setup: <span class="sf">$497</span>', 'tier2-desc': 'Automation plus a trained VA handling live calls, booking estimates, and following up on open quotes. Everything your competitors\u2019 office does\u2009\u2014\u2009for a fraction of the cost.',
+      'tier3-name': 'Complete Partner', 'tier3-setup': 'One-time setup: <span class="sf">$797</span>', 'tier3-desc': 'White-glove operations partner. We run your entire back office\u2009\u2014\u2009inbound, outbound, scheduling, invoice follow-up, and monthly reporting.',
+      'most-popular': 'Most popular', 'setup-waived': '&#10003; Setup fee waived on annual plans',
+      't1f1': 'Missed call text-back (60 sec)', 't1f2': 'Voicemail transcription', 't1f3': '3-touch follow-up sequence', 't1f4': 'CRM pipeline setup', 't1f5': 'Review request automation', 't1f6': 'Weekly lead report',
+      't2f1': 'Everything in Signals', 't2f2': 'Live call answering (M\u2013F 8\u20136)', 't2f3': 'Estimate booking &amp; scheduling', 't2f4': 'Open estimate follow-up', 't2f5': 'Monthly strategy call', 't2f6': 'Priority response SLA',
+      't3f1': 'Everything in Command', 't3f2': 'Extended hours coverage', 't3f3': 'Invoice &amp; payment follow-up', 't3f4': 'Reactivation campaigns', 't3f5': 'Dedicated ops manager', 't3f6': 'Custom SOP documentation',
+      'pricing-note': '30-day cancellation notice on all plans &middot; One-time setup fee applies &middot; Annual plans waive setup fee',
+      'results-eyebrow': 'Results', 'results-h2': 'What answered. clients see<br>in the first 30 days.',
+      'metric-1': 'additional leads captured per month that would have gone unanswered',
+      'metric-2': 'of leads followed up within 5 minutes vs. 26 hours manually',
+      'metric-3': 'more Google reviews in the first 90 days vs. asking manually',
+      'metric-4': 'average recovered pipeline value in month one',
+      'test-1': 'I had 14 calls I didn\u2019t know I missed last month. answered. followed up on every one. Three of them booked jobs. That\u2019s over $6,000 I would have left on the table.',
+      'test-1-attr': 'Owner, Kowalski HVAC \u00b7 Chicago, IL',
+      'test-2': 'My PE-backed competitor down the street answers every call within two rings. I used to lose jobs to them constantly. Not anymore. answered. leveled the playing field.',
+      'test-2-attr': 'Owner, Rivera Plumbing \u00b7 Milwaukee, WI',
+      'faq-eyebrow': 'FAQ', 'faq-h2': 'Straight answers.',
+      'faq-q1': 'Does my customer know they\u2019re not talking directly to me?', 'faq-a1': 'No. We answer as your business \u2014 your name, your number. Your customers don\u2019t know answered. exists. They just think you finally have your act together.',
+      'faq-q2': 'What trades do you work with?', 'faq-a2': 'HVAC, plumbing, electrical, roofing, landscaping, general contracting, and most home service trades. If your phone rings with inbound leads, we can help.',
+      'faq-q3': 'How long does it take to get set up?', 'faq-a3': 'Most clients are fully live within 48 hours of signing up. We handle the entire setup \u2014 you don\u2019t configure anything. We just need your business details and you forward your line to us.',
+      'faq-q4': 'Do I have to sign a long-term contract?', 'faq-a4': 'No long-term commitment required. All plans run month-to-month with a 30-day cancellation notice. Annual plans waive the setup fee and save you 25% monthly.',
+      'faq-q5': 'What if I already have a CRM or scheduling software?', 'faq-a5': 'We can work alongside most existing tools. If you don\u2019t have one, we set up your entire system as part of onboarding \u2014 included in every plan at no extra charge.',
+      'faq-q6': 'How is this different from a regular answering service?', 'faq-a6': 'An answering service takes messages. We manage your entire lead lifecycle \u2014 from the first missed call to a booked job to a five-star Google review. We\u2019re your operations partner, not a message pad.',
+      'faq-q7': 'Can I see what\u2019s happening with my leads in real time?', 'faq-a7': 'Yes. You get access to your own dashboard \u2014 log in anytime to see every call, lead, estimate, and booked job. Plus a weekly report every Monday morning.',
+      'cta-h2': 'Your competitors aren\u2019t hoping leads call back.<br>They have a system.',
+      'cta-sub': 'Get the same back-office operations they have \u2014 without the overhead.',
+      'cta-btn1': 'Get started today \u2192', 'cta-btn2': 'Talk to us first',
+      'cta-trust': 'No long-term contracts \u00b7 30-day cancellation notice \u00b7 Live in 48 hours',
+      'footer-privacy': 'Privacy', 'footer-terms': 'Terms',
+
+      'contact-eyebrow': 'Get started',
+      'contact-h2': 'Let\u2019s talk about your business.',
+      'contact-sub': 'Fill out the form and we\u2019ll reach out within one business hour. No sales pitch \u2014 just a straight conversation about whether answered. is the right fit.',
+      'form-fname': 'First name', 'form-business': 'Business name',
+      'form-trade': 'Trade', 'form-missed': 'Missed calls per week',
+      'form-select': 'Select...', 'form-other': 'Other', 'form-notsure': 'Not sure',
+      'form-phone': 'Phone number', 'form-email': 'Email',
+      'form-submit': 'Get started \u2192',
+      'form-note': 'We respond within one business hour. No spam, ever.',
+      'form-consent': 'By submitting this form you agree to be contacted by answered. via phone, email, or text message regarding your inquiry. Reply STOP to opt out of texts at any time. View our',
+      'form-privacy-link': 'Privacy Policy',
+      'form-success': 'Thanks \u2014 we\u2019ll be in touch within the hour. Check your phone.',
+      'form-error': 'Something went wrong. Email us directly at hello@getanswered.co',
+      'footer-legal': '\u00a9 2025 Answered. A Corbel Group Company. All rights reserved.'
+    },
+    es: {
+      'nav-how': 'Cómo funciona', 'nav-pricing': 'Precios', 'nav-faq': 'Preguntas', 'nav-contact': 'Contacto', 'nav-cta': 'Empezar →',
+      'hero-eyebrow': 'Para el contratista que echa ganas · Nosotros nos encargamos',
+      'hero-h1': 'Tú andas en<br>la chamba. Nosotros<br>contestamos el teléfono.',
+      'hero-sub': 'answered. le pone sistema al negocio del contratista independiente — contestamos las llamadas, le damos seguimiento a los clientes y agendamos los trabajos. Sin contratar a nadie más. Sin dejar lana sobre la mesa.',
+      'hero-cta1': 'Que no se me escape un cliente', 'hero-cta2': 'Ver cómo funciona',
+      'trust-1': 'Sin contratos largos', 'trust-2': 'Aviso de 30 días para cancelar', 'trust-3': 'Arrancamos en 48 horas',
+      'pain-eyebrow': 'El problema',
+      'pain-h2': 'No es que chambees mal.<br>Es el teléfono.',
+      'pain-sub': 'Como dicen: el camarón que se duerme, se lo lleva la corriente. Y al contratista que no contesta, el cliente se lo lleva la competencia. Así están las cosas.',
+      'pain-label-1': 'de las llamadas se pierden mientras andas en la chamba. Cada una es un trabajo que otro está agarrando ahorita mismo.',
+      'pain-label-2': 'en promedio tarda un contratista en devolver una llamada. Para cuando llamas, ya contrataron a alguien más.',
+      'pain-label-3': 'es lo que vale en promedio un trabajo de HVAC, plomería o techos. Eso es lo que se te va con cada llamada perdida.',
+      'pain-close': 'Tu competencia — la que tiene respaldo de inversionistas — ya tiene quien le conteste, quien le dé seguimiento a los clientes y quien les llene la agenda. <strong>Tú lo has venido haciendo solo. Con answered., eso se acaba.</strong>',
+      'sol-eyebrow': 'Lo que hacemos', 'sol-h2': 'Tu negocio corriendo solo.<br>Mientras tú<br>echas ganas afuera.',
+      'sol-sub': 'answered. se encarga del negocio para que tú te enfoques en el oficio. Cada llamada, cada cliente, cada seguimiento — en buenas manos.',
+      'feat-title-1': 'Cada llamada contestada o capturada', 'feat-body-1': '¿Se te fue una llamada? En menos de 60 segundos tu cliente recibe un mensaje. Atención en vivo en horario laboral. No se escapa ningún cliente.',
+      'feat-title-2': 'Le damos seguimiento hasta que agenden', 'feat-body-2': 'Llamamos, mandamos mensajes y correos a cada cliente potencial hasta que agenden una cita o nos digan que no. Se acabó eso de que los clientes se enfríen.',
+      'feat-title-3': 'Las cotizaciones las perseguimos nosotros', 'feat-body-3': 'Le damos seguimiento a cada presupuesto a los 2, 5 y 10 días. La mayoría de los contratistas pierden entre el 30 y el 40% de su lana en cotizaciones sin seguimiento.',
+      'feat-title-4': 'Reseñas que llegan solas', 'feat-body-4': 'Cada trabajo terminado dispara una solicitud de reseña automática. La mayoría de nuestros clientes pasan de 30 a más de 150 reseñas en Google en sus primeros seis meses. Las reseñas ganan trabajos antes de que contestes el teléfono.',
+      'feat-title-5': 'El reporte semanal que sí vas a leer', 'feat-body-5': 'Cada lunes en tu correo: cuántas llamadas contestamos, cuántos clientes nuevos, cuántos presupuestos y cuántos trabajos agendados. Tú mandas, sin tener que meterte al detalle.',
+      'brand-tag': 'Tú pones el trabajo. Nosotros ponemos el sistema.',
+      'how-eyebrow': 'Cómo funciona', 'how-h2': 'Arrancamos en 48 horas.',
+      'step-title-1': 'Nos conectamos', 'step-body-1': 'Desvías tu línea de negocio a answered. Nosotros configuramos todo — el CRM, las automatizaciones y el calendario de citas. No mueves un dedo. En 48 horas ya está jalando.',
+      'step-title-2': 'Cada llamada, atendida', 'step-body-2': 'Las llamadas entran y se contestan o se capturan con un mensaje en 60 segundos. Los clientes se registran, les damos seguimiento y los movemos por el proceso. Las cotizaciones se rastrean solas.',
+      'step-title-3': 'Tú ves todo, sin perderte nada', 'step-body-3': 'Tu reporte semanal muestra cada llamada, cada cliente y cada trabajo agendado. Entra a tu tablero cuando quieras. Siempre al mando — sin cargarte el estrés.',
+      'price-eyebrow': 'Precios', 'price-h2': 'Precios claros.<br>Sin letra chica.', 'price-sub': 'Con el dinero de un trabajo de HVAC que se te va, pagas answered. por un año entero.',
+      'toggle-monthly': 'Mensual', 'toggle-annual': 'Anual', 'save-badge': 'Ahorra 25%',
+      'per-month': 'al mes',
+      'annual-billed-1': '$3,564 al año, facturado de una vez', 'annual-billed-2': '$8,364 al año, facturado de una vez', 'annual-billed-3': '$14,364 al año, facturado de una vez',
+      'tier1-name': 'Solo Automatización',
+      'tier1-setup': 'Configuración única: <span class="sf">$297</span>',
+      'tier1-desc': 'Pura automatización. Captura cada llamada perdida, manda mensajes automáticos, llena tu CRM y te manda reportes semanales. Tu negocio jalando solo, las 24 horas, sin que metas mano.',
+      'tier2-name': 'Automatización + Persona Real',
+      'tier2-setup': 'Configuración única: <span class="sf">$497</span>',
+      'tier2-desc': 'Automatización más un asistente entrenado que contesta en vivo, agenda estimados y le da seguimiento a cotizaciones. Todo lo que tiene la oficina de tu competencia — al precio que sí puedes.',
+      'tier3-name': 'Socio de Operaciones',
+      'tier3-setup': 'Configuración única: <span class="sf">$797</span>',
+      'tier3-desc': 'Nos hacemos cargo de todo tu negocio — llamadas, agenda, seguimiento de facturas y reportes mensuales. Para el contratista que ya va en serio y quiere escalar.',
+      'most-popular': 'El más pedido', 'setup-waived': '&#10003; Sin cargo de configuración en planes anuales',
+      't1f1': 'Mensaje automático en llamada perdida (60 seg)', 't1f2': 'Transcripción del buzón de voz', 't1f3': 'Secuencia de seguimiento de 3 toques', 't1f4': 'Configuración de pipeline en CRM', 't1f5': 'Solicitudes de reseñas automáticas', 't1f6': 'Reporte semanal de clientes',
+      't2f1': 'Todo lo de Signals', 't2f2': 'Atención en vivo (Lun–Vie 8–6)', 't2f3': 'Agenda y programación de estimados', 't2f4': 'Seguimiento de cotizaciones abiertas', 't2f5': 'Llamada de estrategia mensual', 't2f6': 'Tiempo de respuesta garantizado',
+      't3f1': 'Todo lo de Command', 't3f2': 'Cobertura en horas extendidas', 't3f3': 'Seguimiento de facturas y cobros', 't3f4': 'Campañas para reactivar clientes', 't3f5': 'Gerente de operaciones dedicado', 't3f6': 'Documentación de procesos a la medida',
+      'pricing-note': 'Aviso de 30 días para cancelar en todos los planes · Cargo único de configuración · Los planes anuales no tienen cargo de configuración',
+      'results-eyebrow': 'Resultados', 'results-h2': 'Lo que pasa en los primeros<br>30 días con answered.',
+      'metric-1': 'clientes adicionales capturados al mes que antes se iban a la competencia',
+      'metric-2': 'de los seguimientos se hacen en menos de 5 minutos, no 26 horas después',
+      'metric-3': 'más reseñas en Google en los primeros 90 días que pidiéndolas a mano',
+      'metric-4': 'en clientes recuperados durante el primer mes, en promedio',
+      'test-1': 'El mes pasado tenía 14 llamadas perdidas que ni sabía que existían. answered. les dio seguimiento a todas. Tres de esas llamadas se convirtieron en trabajos. Más de $6,000 que me hubiera quedado sin cobrar.',
+      'test-1-attr': 'Propietario, Kowalski HVAC · Chicago, IL',
+      'test-2': 'Mi competencia — esa que tiene inversionistas atrás — contesta cada llamada en dos timbrazos. Antes les perdía trabajo seguido. Ya no. answered. me puso al mismo nivel.',
+      'test-2-attr': 'Propietario, Rivera Plombería · Milwaukee, WI',
+      'faq-eyebrow': 'Preguntas frecuentes', 'faq-h2': 'Respuestas derechas.',
+      'faq-q1': '¿Mi cliente va a saber que no está hablando conmigo directamente?',
+      'faq-a1': 'Para nada. Contestamos con el nombre de tu negocio y tu número. Tus clientes no saben que answered. existe. Nada más van a pensar que ya te pusiste las pilas.',
+      'faq-q2': '¿Con qué oficios trabajan?',
+      'faq-a2': 'HVAC, plomería, electricidad, techos, jardines, construcción en general y la mayoría de los servicios para el hogar. Si tu teléfono suena con clientes que quieren trabajo, nosotros podemos ayudarte.',
+      'faq-q3': '¿Cuánto tarda la configuración?',
+      'faq-a3': 'La mayoría de los clientes están jalando en 48 horas. Nosotros nos encargamos de todo — tú no configuras nada. Solo necesitamos los datos de tu negocio y desvías tu línea.',
+      'faq-q4': '¿Tengo que firmar un contrato largo?',
+      'faq-a4': 'No hay compromiso largo. Todos los planes son mes a mes con aviso de 30 días para cancelar — así de fácil. Los planes anuales no tienen cargo de configuración y ahorras un 25% al mes.',
+      'faq-q5': '¿Y si ya tengo un CRM o software de agenda?',
+      'faq-a5': 'Jalamos con la mayoría de las herramientas que ya usas. Si no tienes ninguna, te configuramos todo desde cero como parte del proceso — incluido en todos los planes sin costo extra.',
+      'faq-q6': '¿En qué se diferencia esto de un servicio de contestadora?',
+      'faq-a6': 'Una contestadora nada más toma el recado. Nosotros nos encargamos de todo el ciclo del cliente — desde la primera llamada perdida hasta el trabajo terminado y la reseña de cinco estrellas en Google. Somos tu brazo de operaciones, no un bloc de notas.',
+      'faq-q7': '¿Puedo ver en tiempo real lo que pasa con mis clientes?',
+      'faq-a7': 'Sí. Tienes acceso a tu propio tablero — entra cuando quieras y ves cada llamada, cliente, estimado y trabajo agendado. Más el reporte en tu correo cada lunes por la mañana.',
+      'cta-h2': 'Tu competencia ya tiene<br>quien le conteste. ¿Y tú,<br>qué estás esperando?',
+      'cta-sub': 'Ponle el mismo sistema que tiene la competencia grande — sin tener que contratar a nadie.',
+      'cta-btn1': 'Arranca hoy →', 'cta-btn2': 'Primero platiquemos',
+      'cta-trust': 'Sin contratos largos · 30 días de aviso para cancelar · Arrancamos en 48 horas',
+      'footer-privacy': 'Privacidad', 'footer-terms': 'Términos',
+      'footer-legal': '© 2025 Answered. Una empresa de Corbel Group. Todos los derechos reservados.',
+      'contact-eyebrow': 'Empezar',
+      'contact-h2': 'Cuéntanos de tu negocio.',
+      'contact-sub': 'Llena el formulario y te contactamos en menos de una hora. Sin rollo de ventas — solo una plática directa para ver si answered. es lo que necesitas.',
+      'form-fname': 'Tu nombre', 'form-business': 'Nombre del negocio',
+      'form-trade': 'Tu oficio', 'form-missed': 'Llamadas perdidas por semana',
+      'form-select': 'Elige una opción...', 'form-other': 'Otro', 'form-notsure': 'No sé bien',
+      'form-phone': 'Tu teléfono', 'form-email': 'Tu correo',
+      'form-submit': 'Arranca hoy →',
+      'form-note': 'Te respondemos en menos de una hora. Sin spam, te lo prometemos.',
+      'form-consent': 'Al enviar este formulario aceptas ser contactado por answered. vía teléfono, correo electrónico o mensaje de texto. Responde STOP para cancelar mensajes en cualquier momento. Consulta nuestra',
+      'form-privacy-link': 'Política de Privacidad',
+      'form-success': '¡Listo! Ya te mandamos confirmación. Espera nuestra llamada.',
+      'form-error': 'Algo salió mal. Escrbínos directo a hello@getanswered.co'
+    }
+  };
+
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.documentElement.setAttribute('lang', lang);
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n[lang][key] !== undefined) el.innerHTML = i18n[lang][key];
+    });
+    document.querySelectorAll('.lang-btn, .mobile-lang button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+
+  let menuOpen = false;
+  const menu = document.getElementById('mobileMenu');
+  const ham = document.getElementById('hamburger');
+  function toggleMobile() {
+    menuOpen = !menuOpen;
+    menu.style.display = menuOpen ? 'flex' : 'none';
+    setTimeout(() => { if (menuOpen) menu.classList.add('open'); }, 10);
+    if (!menuOpen) menu.classList.remove('open');
+    ham.querySelectorAll('span')[0].style.transform = menuOpen ? 'rotate(45deg) translate(5px,5px)' : '';
+    ham.querySelectorAll('span')[1].style.opacity = menuOpen ? '0' : '1';
+    ham.querySelectorAll('span')[2].style.transform = menuOpen ? 'rotate(-45deg) translate(5px,-5px)' : '';
+  }
+  function closeMobile() {
+    menuOpen = false;
+    menu.classList.remove('open');
+    setTimeout(() => { menu.style.display = 'none'; }, 300);
+    ham.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = '1'; });
+  }
+
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  function togglePricing() {
+    const toggle = document.getElementById('pricingToggle');
+    const labelM = document.getElementById('label-monthly');
+    const labelA = document.getElementById('label-annual');
+    const isAnnual = toggle.classList.toggle('annual');
+    document.body.classList.toggle('annual-mode', isAnnual);
+    labelM.classList.toggle('active', !isAnnual);
+    labelA.classList.toggle('active', isAnnual);
+  }
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObserver.observe(el));
+  document.querySelectorAll('#hero .reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), i * 120);
+  });
+
+  // CONTACT FORM
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.form-submit');
+    const success = document.getElementById('formSuccess');
+    const error = document.getElementById('formError');
+    btn.textContent = '...';
+    btn.style.opacity = '.7';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        success.style.display = 'block';
+        error.style.display = 'none';
+        btn.style.display = 'none';
+      } else {
+        throw new Error();
+      }
+    } catch {
+      error.style.display = 'block';
+      success.style.display = 'none';
+      btn.textContent = currentLang === 'es' ? 'Empezar →' : 'Get started →';
+      btn.style.opacity = '1';
+    }
+  });
+
+  // MODALS
+  function openModal(id){
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(id){
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow='';
+  }
+  function closeModalOutside(e,id){
+    if(e.target===document.getElementById(id)) closeModal(id);
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'));
+    document.body.style.overflow='';
+  });
+</script>
+
+<!-- PRIVACY POLICY MODAL -->
+<div class="modal-overlay" id="privacy-modal" onclick="closeModalOutside(event,'privacy-modal')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('privacy-modal')">&times;</button>
+    <div class="modal-eyebrow">Legal</div>
+    <h1 class="modal-title">Privacy Policy</h1>
+    <p class="modal-date">Effective Date: June 07, 2026 &nbsp;&middot;&nbsp; Corbel Group LLC d/b/a answered. &nbsp;&middot;&nbsp; hello@getanswered.co</p>
+    <div class="modal-highlight"><p><strong>The short version:</strong> We only collect the information you give us through our contact form. We use it to respond to your inquiry. We don&rsquo;t sell your data. We don&rsquo;t run ads.</p></div>
+    <div class="modal-section"><h2>1. Who We Are</h2><p>answered. is operated by Corbel Group LLC, a Wyoming limited liability company. This policy applies to information collected through getanswered.co.</p></div>
+    <div class="modal-section"><h2>2. Information We Collect</h2><h3>Information you provide</h3><p>When you submit our contact form, we collect your first name, business name, trade type, phone number, email address, and estimated missed calls per week.</p><h3>Automatic technical data</h3><p>Standard server logs including IP address and browser type, used for security only and not linked to your identity.</p><h3>Cookies</h3><p>We use only essential cookies. No advertising or tracking cookies. You may disable cookies without affecting site functionality.</p></div>
+    <div class="modal-section"><h2>3. How We Use Your Information</h2><ul><li>Respond to your inquiry via phone, email, or text</li><li>Determine whether our services are a fit for your business</li><li>Deliver our services if you become a client</li><li>Send relevant information about answered.</li></ul><p>We do not use your information for advertising or profiling.</p></div>
+    <div class="modal-section"><h2>4. Text Message Communications (TCPA)</h2><div class="modal-highlight"><p><strong>By submitting your phone number, you consent to receive text messages from answered. regarding your inquiry.</strong> Reply STOP to unsubscribe. Message and data rates may apply.</p></div><p>We comply with the Telephone Consumer Protection Act (TCPA). We honor opt-out requests promptly and never send marketing messages to individuals who have opted out.</p></div>
+    <div class="modal-section"><h2>5. How We Share Your Information</h2><p>We do not sell your information. We share it only with:</p><ul><li><strong>Formspree</strong> &mdash; our contact form processor</li><li><strong>GoHighLevel</strong> &mdash; our client relationship management platform</li><li><strong>Google Workspace</strong> &mdash; our email and document platform</li><li><strong>Law enforcement</strong> &mdash; only when required by law</li></ul></div>
+    <div class="modal-section"><h2>6. Data Retention</h2><p>We retain contact form submissions for up to two (2) years. Client data is retained during the service relationship and for two (2) years following termination. Request deletion at any time by emailing hello@getanswered.co.</p></div>
+    <div class="modal-section"><h2>7. Your Rights</h2><p>You may access, correct, or request deletion of your information. California residents have additional rights under CCPA. We do not sell personal information. Contact hello@getanswered.co to exercise any privacy rights.</p></div>
+    <div class="modal-section"><h2>8. Data Security</h2><p>We use SSL/TLS encryption, access controls, and confidentiality requirements to protect your information. No method of internet transmission is 100% secure.</p></div>
+    <div class="modal-section"><h2>9. Changes to This Policy</h2><p>We may update this policy by posting a revised version with an updated Effective Date. Continued use of the site constitutes acceptance.</p></div>
+    <div class="modal-section"><h2>10. Contact</h2><p><strong>answered.</strong> &mdash; Corbel Group LLC<br>Email: <a href="mailto:hello@getanswered.co">hello@getanswered.co</a></p></div>
+  </div>
+</div>
+
+<!-- TERMS OF USE MODAL -->
+<div class="modal-overlay" id="terms-modal" onclick="closeModalOutside(event,'terms-modal')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('terms-modal')">&times;</button>
+    <div class="modal-eyebrow">Legal</div>
+    <h1 class="modal-title">Terms of Use</h1>
+    <p class="modal-date">Effective Date: June 07, 2026 &nbsp;&middot;&nbsp; Corbel Group LLC d/b/a answered. &nbsp;&middot;&nbsp; hello@getanswered.co</p>
+    <div class="modal-highlight"><p><strong>By using this website, you agree to these terms.</strong> These terms apply to the website only. Use of answered. services as a client is governed by a separate Service Agreement.</p></div>
+    <div class="modal-section"><h2>1. Acceptance of Terms</h2><p>These Terms govern your use of getanswered.co, operated by Corbel Group LLC d/b/a answered. By using the site, you agree to these Terms. They apply to the website only &mdash; client service terms are in the executed Service Agreement.</p></div>
+    <div class="modal-section"><h2>2. Permitted Use</h2><p>You may use this site for lawful purposes only. You agree not to submit false information, attempt unauthorized access, use automated scrapers, transmit malware, or impersonate any person or entity.</p></div>
+    <div class="modal-section"><h2>3. Intellectual Property</h2><p>All content on this site &mdash; text, graphics, logos, design elements &mdash; is the property of Corbel Group LLC, protected by applicable law. You may view and print pages for personal non-commercial use only. The &ldquo;answered.&rdquo; name and brand elements are proprietary. No license is granted to use them.</p></div>
+    <div class="modal-section"><h2>4. Information Accuracy</h2><p>We make reasonable efforts to keep site information accurate. Pricing, features, and service descriptions are subject to change. Definitive service terms are in the executed Service Agreement.</p></div>
+    <div class="modal-section"><h2>5. Disclaimer of Warranties</h2><p>THIS SITE IS PROVIDED &ldquo;AS IS&rdquo; WITHOUT WARRANTIES OF ANY KIND. WE DO NOT WARRANT THAT THE SITE WILL BE UNINTERRUPTED OR ERROR-FREE.</p></div>
+    <div class="modal-section"><h2>6. Limitation of Liability</h2><p>TO THE FULLEST EXTENT PERMITTED BY LAW, CORBEL GROUP LLC SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES. OUR TOTAL LIABILITY FOR SITE-RELATED CLAIMS SHALL NOT EXCEED $100.</p></div>
+    <div class="modal-section"><h2>7. Contact Form</h2><p>By submitting our contact form, you consent to being contacted by phone, email, or text. Submission does not create a client relationship or obligate either party to enter into a Service Agreement.</p></div>
+    <div class="modal-section"><h2>8. Governing Law</h2><p>These Terms are governed by Wyoming law. Disputes shall be resolved by binding arbitration in Cheyenne, Wyoming under AAA Commercial Arbitration Rules.</p></div>
+    <div class="modal-section"><h2>9. Changes</h2><p>We may update these Terms at any time. Continued use after changes constitutes acceptance.</p></div>
+    <div class="modal-section"><h2>10. Contact</h2><p><strong>answered.</strong> &mdash; Corbel Group LLC<br>Email: <a href="mailto:hello@getanswered.co">hello@getanswered.co</a></p></div>
+  </div>
+</div>
+</body>
+</html>

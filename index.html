@@ -239,8 +239,11 @@
     .form-submit{font-family:var(--sans);font-size:15px;font-weight:500;background:var(--deep);color:var(--cream);border:none;padding:16px 32px;border-radius:8px;cursor:pointer;transition:background .2s,transform .2s;align-self:flex-start;margin-top:8px}
     .form-submit:hover{background:var(--mid);transform:translateY(-2px)}
     .form-note{font-size:12px;color:var(--muted);margin-top:4px}
-    .form-consent{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6}
-    .form-consent a{color:var(--accent);text-decoration:underline}
+    .form-checkbox-wrap{margin-top:10px}
+    .form-checkbox-label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+    .form-checkbox-label input[type="checkbox"]{width:16px;height:16px;margin-top:2px;flex-shrink:0;accent-color:var(--accent);cursor:pointer}
+    .form-checkbox-text{font-size:11px;color:var(--muted);line-height:1.65}
+    .form-checkbox-text a{color:var(--accent);text-decoration:underline}
     .form-success{display:none;font-size:14px;color:var(--accent);font-weight:500;padding:14px 18px;background:#EAF3DE;border-radius:8px;border:1px solid #C0DD97;margin-top:8px}
     .form-error{display:none;font-size:14px;color:#A32D2D;font-weight:500;padding:14px 18px;background:#FCEBEB;border-radius:8px;margin-top:8px}
     @media(max-width:600px){.form-row{grid-template-columns:1fr}}
@@ -576,7 +579,12 @@
       </div>
       <button type="submit" class="form-submit" data-i18n="form-submit">Get started &rarr;</button>
       <p class="form-note" data-i18n="form-note">We respond within one business hour. No spam, ever.</p>
-      <p class="form-consent" data-i18n="form-consent">By submitting this form you agree to be contacted by answered. via phone, email, or text message regarding your inquiry. Reply STOP to opt out of texts at any time. View our <a href="#" onclick="openModal('privacy-modal');return false;" data-i18n="form-privacy-link">Privacy Policy</a>.</p>
+      <div class="form-checkbox-wrap">
+        <label class="form-checkbox-label">
+          <input type="checkbox" name="sms_consent" id="sms_consent" required>
+          <span class="form-checkbox-text" data-i18n="form-consent">I agree to receive text messages from answered. (Corbel Group LLC) about my inquiry. Message frequency may vary. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help. View our <a href="#" onclick="openModal('privacy-modal');return false;" data-i18n="form-privacy-link">Privacy Policy</a>.</span>
+        </label>
+      </div>
       <div class="form-success" id="formSuccess" data-i18n="form-success">Thanks &mdash; we&rsquo;ll be in touch within the hour. Check your phone.</div>
       <div class="form-error" id="formError" data-i18n="form-error">Something went wrong. Email us directly at hello@getanswered.co</div>
     </form>
@@ -682,7 +690,7 @@
       'form-phone': 'Phone number', 'form-email': 'Email',
       'form-submit': 'Get started \u2192',
       'form-note': 'We respond within one business hour. No spam, ever.',
-      'form-consent': 'By submitting this form you agree to be contacted by answered. via phone, email, or text message regarding your inquiry. Reply STOP to opt out of texts at any time. View our',
+      'form-consent': 'I agree to receive text messages from answered. (Corbel Group LLC) about my inquiry. Message frequency may vary. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help. View our',
       'form-privacy-link': 'Privacy Policy',
       'form-success': 'Thanks \u2014 we\u2019ll be in touch within the hour. Check your phone.',
       'form-error': 'Something went wrong. Email us directly at hello@getanswered.co',
@@ -771,7 +779,7 @@
       'form-phone': 'Tu teléfono', 'form-email': 'Tu correo',
       'form-submit': 'Arranca hoy →',
       'form-note': 'Te respondemos en menos de una hora. Sin spam, te lo prometemos.',
-      'form-consent': 'Al enviar este formulario aceptas ser contactado por answered. vía teléfono, correo electrónico o mensaje de texto. Responde STOP para cancelar mensajes en cualquier momento. Consulta nuestra',
+      'form-consent': 'Acepto recibir mensajes de texto de answered. (Corbel Group LLC) sobre mi solicitud. La frecuencia de mensajes puede variar. Se pueden aplicar tarifas de mensajes y datos. Responde STOP para cancelar, HELP para ayuda. Consulta nuestra',
       'form-privacy-link': 'Política de Privacidad',
       'form-success': '¡Listo! Ya te mandamos confirmación. Espera nuestra llamada.',
       'form-error': 'Algo salió mal. Escrbínos directo a hello@getanswered.co'
